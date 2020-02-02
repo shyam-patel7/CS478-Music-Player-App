@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CS478 Project 5: Services -->
+<!-- Name:   Shyam Patel       -->
+<!-- NetID:  spate54           -->
+<!-- Date:   Dec 9, 2019       -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.proj5.services.AudioClient">
+    <uses-permission android:name="com.proj5.services.ClipServer.MEDIA_PLAYBACK" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

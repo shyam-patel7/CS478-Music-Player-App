@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CS478 Project 5: Services -->
+<!-- Name:   Shyam Patel       -->
+<!-- NetID:  spate54           -->
+<!-- Date:   Dec 9, 2019       -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:paddingBottom="5dp"
+    android:paddingEnd="14dp"
+    android:paddingStart="14dp"
+    android:paddingTop="5dp"
+    android:fontFamily="sans-serif-thin"
+    android:textColor="@color/clip_selector_foreground"
+    android:textSize="52sp" />

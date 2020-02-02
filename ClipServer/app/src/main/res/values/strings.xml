@@ -1,0 +1,12 @@
+<!-- CS478 Project 5: Services -->
+<!-- Name:   Shyam Patel       -->
+<!-- NetID:  spate54           -->
+<!-- Date:   Dec 9, 2019       -->
+
+<resources>
+    <string name="app_name">ClipServer</string>
+    <string name="notif_title">Media Service</string>
+    <string name="notif_desc">Tap to open playback controls</string>
+    <string name="client_pkg">com.proj5.services.AudioClient</string>
+    <string name="client_cls">com.proj5.services.AudioClient.MainActivity</string>
+</resources>

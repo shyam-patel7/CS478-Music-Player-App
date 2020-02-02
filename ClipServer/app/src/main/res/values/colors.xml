@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CS478 Project 4: Threads -->
+<!-- Name:   Shyam Patel      -->
+<!-- NetID:  spate54          -->
+<!-- Date:   Nov 24, 2019     -->
+
+<resources>
+    <color name="colorPrimary">#5469D5</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

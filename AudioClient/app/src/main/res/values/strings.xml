@@ -1,0 +1,32 @@
+<!-- CS478 Project 5: Services -->
+<!-- Name:   Shyam Patel       -->
+<!-- NetID:  spate54           -->
+<!-- Date:   Dec 9, 2019       -->
+
+<resources>
+    <string name="app_name">AudioClient</string>
+    <string name="action_bar">Action Bar</string>
+    <string name="service_sw">Service</string>
+    <string name="play_btn">Play Button</string>
+    <string name="pause_btn">Pause Button</string>
+    <string name="resume_btn">Resume Button</string>
+    <string name="stop_btn">Stop Button</string>
+    <string name="log_bind_success">Successfully bound to MediaPlaybackService.</string>
+    <string name="log_bind_failure">Failed to bind to MediaPlaybackService.</string>
+    <string name="log_start">Started MediaPlaybackService.</string>
+    <string name="log_stop">Stopped MediaPlaybackService.</string>
+    <string name="log_unbind">Unbound from MediaPlaybackService.</string>
+    <string name="toast_begin">Tap to begin.</string>
+    <string name="toast_stop">Media playback stopped.</string>
+    <string name="service_pkg">com.proj5.services.ClipServer</string>
+    <string name="service_cls">com.proj5.services.ClipServer.MediaPlaybackService</string>
+    <string-array name="clips">
+        <item>A New Beginning</item>
+        <item>Creative Minds</item>
+        <item>Downtown</item>
+        <item>Evolution</item>
+        <item>Retro Soul</item>
+        <item>Summer</item>
+        <item>Ukulele</item>
+    </string-array>
+</resources>

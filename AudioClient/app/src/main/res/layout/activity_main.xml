@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CS478 Project 5: Services -->
+<!-- Name:   Shyam Patel       -->
+<!-- NetID:  spate54           -->
+<!-- Date:   Dec 9, 2019       -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/activity_main_iv_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:contentDescription="@string/action_bar"
+        android:background="@color/colorPrimary"
+        android:onClick="toggleService"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/activity_main_iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/action_bar"
+        android:src="@drawable/ic_launcher_foreground"
+        android:translationX="5dp"
+        app:layout_constraintRight_toLeftOf="@id/activity_main_sw_service"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/activity_main_sw_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:checked="false"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/service_sw"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/activity_main_lv_clips"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_tv_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_iv_action_bar" />
+
+    <TextView
+        android:id="@+id/activity_main_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/colorBlack"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_btn_resume"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_main_tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorBlack"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_btn_resume"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_main_btn_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/resume_btn"
+        android:onClick="resume"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_pb_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_main_btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/pause_btn"
+        android:onClick="pause"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_pb_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_main_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/play_btn"
+        android:onClick="play"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_pb_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_main_btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/stop_btn"
+        android:onClick="stop"
+        android:src="@drawable/ic_stop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_pb_progress"
+        app:layout_constraintLeft_toRightOf="@id/activity_main_btn_resume" />
+
+    <ProgressBar
+        android:id="@+id/activity_main_pb_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="10dp"
+        android:scaleY="0"
+        android:max="2000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/activity_main_iv_barrier"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:onClick="toggleService"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_iv_action_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
